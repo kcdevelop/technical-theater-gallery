@@ -23,13 +23,19 @@ Common Styles
 *************/
 body,
 .slide,
-nav.tab-nav {
+nav.tab-nav,
+nav.direction-nav,
+nav.direction-nav > i {
     display: flex;
 }
 .slide img,
 nav.tab-nav,
 nav.direction-nav {
     position: absolute;
+}
+.slide img,
+nav.tab-nav,
+nav.direction-nav {
     width: 100%;
 }
 .slide,
@@ -83,18 +89,19 @@ Slide Styles
     font-family: Nunito, arial, sans-serif;
     font-size: 15px;
     padding: 20px;
-    width: 40%;  
+    width: 75%; 
 }
 /*********************
 Directional Nav Styles
 **********************/
 nav.direction-nav {
+    bottom: 45%;
     box-sizing: border-box;
-    padding: 0px 15px;
+    color: var(--white);
     font-weight: bold;
     font-size: 5vw;
-    color: white;
-    bottom: 45%;
+    justify-content: space-between;
+    padding: 0px 17px;
     top: 45%;
 }
 nav.direction-nav > i {
@@ -103,17 +110,22 @@ nav.direction-nav > i {
     text-shadow: 0px 0px 5px var(--black);
     transition: opacity 500ms ease-in;
     user-select: none;
+    width: 4%;
+}
+nav.direction-nav i > img {
+    max-width: 44px;
+    min-width: 15px;
+    width: 90%;
 }
 nav.direction-nav i:hover {
     cursor: pointer;
     opacity: 1;
 }
-nav.direction-nav > i:first-child {
-    float: left;
+nav.direction-nav > i.back {
+    justify-content: flex-start;
 }
-nav.direction-nav > i:last-child {
-    float: right;
-    transform: rotate(180deg);
+nav.direction-nav > i.next {
+    justify-content: flex-end;
 }
 /*************
 Tab Nav Styles
@@ -144,7 +156,6 @@ Media Queries
     .slide-caption {
         font-size: 13px;
         padding: 7px 12px;
-        width: 75%;
     }
     nav.tab-nav i {
         height: 12px;

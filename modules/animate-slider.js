@@ -2,7 +2,7 @@ import { sliderTrack, navCalc } from './variables.js';
 
 //Animate slider (directionally)
 export const animateSlider = (direction, tabNum, winWidth) => {
-    console.log(direction);
+    
     /*Move the track position forward if the "next" nav arrow 
     is clicked and increase "slideCount"*/
     if(

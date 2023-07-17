@@ -30,7 +30,7 @@ export const initNavigation = () => {
     navigation.forEach(navArrow => {
         navArrow.addEventListener('click', (event) => {
             //Get the class name of the clicked navigation arrow
-            let navArrowName = event.target.classList;
+            let navArrowName = event.currentTarget.classList;
             
             //Track navigation slide count
             if(
